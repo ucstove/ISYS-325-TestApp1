@@ -7,9 +7,14 @@ namespace TestApp1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pushmeButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hello World");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

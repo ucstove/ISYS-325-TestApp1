@@ -28,32 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            pushmeButton = new Button();
             SuspendLayout();
             // 
-            // button1
+            // pushmeButton
             // 
-            button1.Location = new Point(325, 198);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 0;
-            button1.Text = "&Push Me";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            pushmeButton.Location = new Point(325, 198);
+            pushmeButton.Name = "pushmeButton";
+            pushmeButton.Size = new Size(112, 34);
+            pushmeButton.TabIndex = 0;
+            pushmeButton.Text = "&Push Me";
+            pushmeButton.UseVisualStyleBackColor = true;
+            pushmeButton.Click += pushmeButton_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(pushmeButton);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
+        private Button pushmeButton;
     }
 }
