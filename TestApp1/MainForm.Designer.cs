@@ -32,6 +32,9 @@ namespace TestApp1
             pushmeButton = new Button();
             helloworldLabel = new Label();
             closeButton = new Button();
+            carPicture = new PictureBox();
+            testTextBox = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)carPicture).BeginInit();
             SuspendLayout();
             // 
             // pushmeButton
@@ -47,10 +50,10 @@ namespace TestApp1
             // helloworldLabel
             // 
             helloworldLabel.AutoSize = true;
-            helloworldLabel.Font = new Font("Showcard Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            helloworldLabel.Location = new Point(368, 53);
+            helloworldLabel.Font = new Font("Showcard Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            helloworldLabel.Location = new Point(229, 34);
             helloworldLabel.Name = "helloworldLabel";
-            helloworldLabel.Size = new Size(76, 23);
+            helloworldLabel.Size = new Size(144, 44);
             helloworldLabel.TabIndex = 1;
             helloworldLabel.Text = "Label1";
             helloworldLabel.Click += helloworldLabel_Click;
@@ -65,17 +68,38 @@ namespace TestApp1
             closeButton.UseVisualStyleBackColor = true;
             closeButton.Click += closeButton_Click;
             // 
+            // carPicture
+            // 
+            carPicture.ImageLocation = "C:\\Users\\uriah\\Downloads\\Bluecar.png";
+            carPicture.Location = new Point(368, 155);
+            carPicture.Name = "carPicture";
+            carPicture.Size = new Size(304, 113);
+            carPicture.TabIndex = 3;
+            carPicture.TabStop = false;
+            carPicture.Click += carPicture_Click;
+            // 
+            // testTextBox
+            // 
+            testTextBox.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            testTextBox.Location = new Point(107, 342);
+            testTextBox.Name = "testTextBox";
+            testTextBox.Size = new Size(328, 66);
+            testTextBox.TabIndex = 4;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(testTextBox);
+            Controls.Add(carPicture);
             Controls.Add(helloworldLabel);
             Controls.Add(pushmeButton);
             Controls.Add(closeButton);
             Name = "MainForm";
             Text = "My Application";
             Load += MainForm_Load;
+            ((System.ComponentModel.ISupportInitialize)carPicture).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -86,5 +110,7 @@ namespace TestApp1
         private Button pushmeButton;
         private Label helloworldLabel;
         private Button closeButton;
+        private PictureBox carPicture;
+        private TextBox testTextBox;
     }
 }
