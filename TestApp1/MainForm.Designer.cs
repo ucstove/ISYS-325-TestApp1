@@ -34,6 +34,7 @@ namespace TestApp1
             closeButton = new Button();
             carPicture = new PictureBox();
             testTextBox = new TextBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)carPicture).BeginInit();
             SuspendLayout();
             // 
@@ -84,13 +85,24 @@ namespace TestApp1
             testTextBox.Location = new Point(107, 342);
             testTextBox.Name = "testTextBox";
             testTextBox.Size = new Size(328, 66);
-            testTextBox.TabIndex = 4;
+            testTextBox.TabIndex = 5;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(107, 314);
+            label1.Name = "label1";
+            label1.Size = new Size(44, 25);
+            label1.TabIndex = 4;
+            label1.Text = "&Age";
+            label1.Click += label1_Click;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(testTextBox);
             Controls.Add(carPicture);
             Controls.Add(helloworldLabel);
@@ -112,5 +124,6 @@ namespace TestApp1
         private Button closeButton;
         private PictureBox carPicture;
         private TextBox testTextBox;
+        private Label label1;
     }
 }
